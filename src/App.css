@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+html {
+  background-color: rgb(29, 28, 28);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  color: aliceblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "menu small-menu "
+  "menu website-visitors ";
+  width: 100vw;
+  height: 100vh;
+  column-gap: 0.2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu {
+  border: 0.2rem solid gray;
+  grid-area: menu;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  height: 90%;
+  margin:auto;
+  background-color: rgb(52, 50, 50);
+}
+
+.small-menu {
+ 
+  grid-area: small-menu;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10rem;
+  width: 95%;
+  
+} 
+.reviews {
+  border: 0.2rem solid gray;
+  grid-area: reviews;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  width: 50%;
+  height: 80%;
+  background-color: rgb(52, 50, 50);
+}
+
+.average-rating {
+  border: 0.2rem solid gray;
+  grid-area: average-rating;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  width: 50%;
+  height: 80%;
+  background-color: rgb(52, 50, 50);
+ 
+}
+
+.sentiment-analysis {
+  border: 0.2rem solid gray;
+  grid-area: sentiment-analysis;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  width: 50%;
+  height: 80%;
+  background-color: rgb(52, 50, 50);
+  
+}
+
+.website-visitors {
+  border: 0.2rem solid gray;
+  grid-area: website-visitors;
+  width: 95%;
+  height: 80%;
+  background-color: rgb(52, 50, 50);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.visitor-number {
+  position: absolute;
+  left: 2rem
 }
